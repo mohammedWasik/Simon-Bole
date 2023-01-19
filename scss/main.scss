@@ -1,0 +1,87 @@
+$bg-color: #011f3f;
+$green-box: green;
+$red-box: red;
+$yellow-box: yellow;
+$blue-box: blue;
+$font-title: "Press Start 2P", cursive;
+
+html {
+  font-size: 10px;
+}
+body {
+  background-color: $bg-color;
+  text-align: center;
+}
+#level-title {
+  color: #f5deb3;
+  font-size: 5rem;
+  font-family: $font-title;
+  margin: 5%;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+  // border: 1px black solid;
+}
+
+.btn {
+  margin: 2.5rem;
+  display: inline-block;
+  min-height: 15rem;
+  width: 15rem;
+  border: 1rem solid black;
+  border-radius: 25%;
+}
+.start {
+  width: auto;
+  min-height: 5rem;
+  margin: 2.5rem;
+  font-size: 2rem;
+  font-family: $font-title;
+  padding: 1rem;
+  border-radius: 7px;
+  border-bottom-left-radius: 0;
+  background-color: #ffacac;
+  &:hover {
+    border-radius: 0px;
+    color: #53488d;
+    background-color: #ffe5e5;
+    background-image: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffacac' fill-opacity='0.4'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: animatedBackground 5s linear infinite alternate;
+  }
+}
+
+.red {
+  background-color: $red-box;
+}
+
+.green {
+  background-color: $green-box;
+}
+
+.blue {
+  background-color: $blue-box;
+}
+
+.yellow {
+  background-color: $yellow-box;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
